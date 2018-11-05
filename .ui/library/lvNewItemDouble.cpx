@@ -1,0 +1,174 @@
+{
+	"components": [
+		{
+			"className": ".listViewItem",
+			"hiddenComponent": false,
+			"id": "a362-9e43-72f1-d5ae",
+			"props": {
+				"children": [
+					"911a-38d9-3ee1-ed57",
+					"1e46-35b4-e622-8a68",
+					"f647-c91f-8c2b-9759"
+				],
+				"name": "lvNewItemDouble",
+				"parent": "57f4-201f-4bfc-5fc6"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "ListViewItem",
+			"userProps": {
+				"flexProps": {},
+				"height": 255.07246376811597,
+				"left": 4.347826086956522,
+				"top": 205.79710144927537,
+				"width": 365.21739130434787
+			}
+		},
+		{
+			"className": ".label .flGrow",
+			"id": "911a-38d9-3ee1-ed57",
+			"props": {
+				"autoHeight": 25,
+				"children": [],
+				"name": "lblCategory",
+				"parent": "a362-9e43-72f1-d5ae",
+				"text": "World",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "Label",
+			"userProps": {
+				"autoHeight": 25,
+				"font": {
+					"size": 22,
+					"bold": true,
+					"italic": false,
+					"family": "TimesNewRomanPS",
+					"style": "BoldMT"
+				},
+				"text": "World",
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".gridView .flGrow",
+			"id": "1e46-35b4-e622-8a68",
+			"props": {
+				"children": [
+					"282f-1af5-2911-5512"
+				],
+				"itemCount": 10,
+				"name": "gvCategoryNews",
+				"parent": "a362-9e43-72f1-d5ae",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "GridView",
+			"userProps": {
+				"flexProps": {
+					"flexGrow": 3
+				},
+				"itemCount": 10,
+				"layoutManager": {
+					"scrollDirection": "HORIZONTAL",
+					"spanCount": 1,
+					"itemSpacing": 10,
+					"lineSpacing": 10
+				},
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".gridViewItem",
+			"hiddenComponent": false,
+			"id": "282f-1af5-2911-5512",
+			"props": {
+				"children": [],
+				"name": "gvNewItem",
+				"parent": "1e46-35b4-e622-8a68"
+			},
+			"source": {
+				"page": "__library__",
+				"type": "gvNewItem",
+				"id": "a662-afad-e813-c75b"
+			},
+			"type": "GridViewItem",
+			"userProps": {
+				"flex": {
+					"positionType": 0
+				},
+				"flexProps": {
+					"positionType": "RELATIVE"
+				},
+				"height": 189.1304347826087,
+				"left": 0,
+				"top": 0,
+				"width": 330.4347826086956
+			}
+		},
+		{
+			"className": ".gridView .flGrow",
+			"id": "f647-c91f-8c2b-9759",
+			"props": {
+				"children": [
+					"b1ef-856f-493b-69e0"
+				],
+				"itemCount": 10,
+				"name": "gvCategoryNews2",
+				"parent": "a362-9e43-72f1-d5ae",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "GridView",
+			"userProps": {
+				"flexProps": {
+					"flexGrow": 3
+				},
+				"itemCount": 10,
+				"layoutManager": {
+					"scrollDirection": "HORIZONTAL",
+					"spanCount": 1,
+					"itemSpacing": 10,
+					"lineSpacing": 10
+				},
+				"marginTop": 10,
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".gridViewItem",
+			"hiddenComponent": false,
+			"id": "b1ef-856f-493b-69e0",
+			"props": {
+				"children": [],
+				"name": "gvNewItem",
+				"parent": "f647-c91f-8c2b-9759"
+			},
+			"source": {
+				"page": "__library__",
+				"type": "gvNewItem",
+				"id": "a662-afad-e813-c75b"
+			},
+			"type": "GridViewItem",
+			"userProps": {
+				"flex": {
+					"positionType": 0
+				},
+				"flexProps": {
+					"positionType": "RELATIVE"
+				},
+				"height": 189.1304347826087,
+				"left": 0,
+				"top": 0,
+				"width": 330.4347826086956
+			}
+		}
+	]
+}

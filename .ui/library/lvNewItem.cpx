@@ -1,0 +1,114 @@
+{
+	"components": [
+		{
+			"className": ".listViewItem",
+			"hiddenComponent": false,
+			"id": "6113-72ee-7f08-73ac",
+			"props": {
+				"children": [
+					"e3b1-8e05-d77e-8f84",
+					"e544-0537-42d5-28d5"
+				],
+				"name": "lvNewItem",
+				"parent": "57f4-201f-4bfc-5fc6"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "ListViewItem",
+			"userProps": {
+				"flexProps": {},
+				"height": 134.21052631578948,
+				"left": 0,
+				"top": 0,
+				"width": 346.05263157894734
+			}
+		},
+		{
+			"className": ".label .flGrow",
+			"id": "e3b1-8e05-d77e-8f84",
+			"props": {
+				"autoHeight": 25,
+				"children": [],
+				"name": "lblCategory",
+				"parent": "6113-72ee-7f08-73ac",
+				"text": "World",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "Label",
+			"userProps": {
+				"autoHeight": 25,
+				"font": {
+					"size": 22,
+					"bold": true,
+					"italic": false,
+					"family": "TimesNewRomanPS",
+					"style": "BoldMT"
+				},
+				"text": "World",
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".gridView .flGrow",
+			"id": "e544-0537-42d5-28d5",
+			"props": {
+				"children": [
+					"f975-1ebf-8c3f-7d83"
+				],
+				"itemCount": 10,
+				"name": "gvCategoryNews",
+				"parent": "6113-72ee-7f08-73ac",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "GridView",
+			"userProps": {
+				"flexProps": {
+					"flexGrow": 3
+				},
+				"itemCount": 10,
+				"layoutManager": {
+					"scrollDirection": "HORIZONTAL",
+					"spanCount": 1,
+					"itemSpacing": 10,
+					"lineSpacing": 10
+				},
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".gridViewItem",
+			"hiddenComponent": false,
+			"id": "f975-1ebf-8c3f-7d83",
+			"props": {
+				"children": [],
+				"name": "gvNewItem",
+				"parent": "e544-0537-42d5-28d5"
+			},
+			"source": {
+				"page": "__library__",
+				"type": "gvNewItem",
+				"id": "a662-afad-e813-c75b"
+			},
+			"type": "GridViewItem",
+			"userProps": {
+				"flex": {
+					"positionType": 0
+				},
+				"flexProps": {
+					"positionType": "RELATIVE"
+				},
+				"height": 189.1304347826087,
+				"left": 0,
+				"top": 0,
+				"width": 330.4347826086956
+			}
+		}
+	]
+}

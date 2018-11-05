@@ -1,0 +1,65 @@
+{
+	"components": [
+		{
+			"className": ".page",
+			"id": "eb9f-6d7c-62b1-41b0",
+			"initialized": true,
+			"props": {
+				"children": [
+					"4620-a05f-e952-49cb",
+					"242c-2fa8-3784-dca3",
+					"be02-6b82-e1d6-a512"
+				],
+				"name": "pgNews",
+				"orientation": "PORTRAIT",
+				"parent": null
+			},
+			"type": "Page",
+			"userProps": {},
+			"version": "6.9.0"
+		},
+		{
+			"className": ".statusBar",
+			"id": "4620-a05f-e952-49cb",
+			"props": {
+				"children": [],
+				"isRemovable": false,
+				"name": "statusBar",
+				"parent": "eb9f-6d7c-62b1-41b0"
+			},
+			"type": "StatusBar",
+			"userProps": {}
+		},
+		{
+			"className": ".headerBar",
+			"id": "242c-2fa8-3784-dca3",
+			"props": {
+				"children": [],
+				"isRemovable": false,
+				"name": "headerBar",
+				"parent": "eb9f-6d7c-62b1-41b0",
+				"title": "News"
+			},
+			"type": "HeaderBar",
+			"userProps": {
+				"title": "News"
+			}
+		},
+		{
+			"className": ".listView .flGrow",
+			"id": "be02-6b82-e1d6-a512",
+			"props": {
+				"children": [],
+				"itemCount": 3,
+				"name": "lvMain",
+				"parent": "eb9f-6d7c-62b1-41b0",
+				"usePageVariable": true
+			},
+			"type": "ListView",
+			"userProps": {
+				"itemCount": 3,
+				"usePageVariable": true
+			}
+		}
+	]
+}

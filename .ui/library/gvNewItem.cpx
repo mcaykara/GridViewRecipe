@@ -1,0 +1,187 @@
+{
+	"components": [
+		{
+			"className": ".gridViewItem",
+			"hiddenComponent": true,
+			"id": "a662-afad-e813-c75b",
+			"props": {
+				"children": [
+					"01ff-b07e-1464-fc7a"
+				],
+				"name": "gvNewItem",
+				"parent": "57f4-201f-4bfc-5fc6"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "GridViewItem",
+			"userProps": {
+				"flexProps": {},
+				"height": 144.73684210526315,
+				"left": 2.6315789473684212,
+				"top": 148.68421052631578,
+				"width": 338.1578947368421
+			}
+		},
+		{
+			"className": ".flexLayout .flAbsoluteGrow",
+			"id": "01ff-b07e-1464-fc7a",
+			"props": {
+				"children": [
+					"4d71-2fe5-7895-3009",
+					"3c06-8071-88ec-72fe"
+				],
+				"name": "flRoot",
+				"parent": "a662-afad-e813-c75b"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"borderColor": "rgba( 155, 155, 155, 1 )",
+				"borderWidth": 1
+			}
+		},
+		{
+			"className": ".imageView .flGrow",
+			"id": "4d71-2fe5-7895-3009",
+			"props": {
+				"children": [],
+				"name": "imgMain",
+				"parent": "01ff-b07e-1464-fc7a",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "ImageView",
+			"userProps": {
+				"imageFillType": "STRETCH",
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".flexLayout .flGrow",
+			"id": "3c06-8071-88ec-72fe",
+			"props": {
+				"children": [
+					"84da-3564-ef93-ed65",
+					"0b52-8d34-871b-e3ee"
+				],
+				"name": "flMain",
+				"parent": "01ff-b07e-1464-fc7a"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"flexProps": {
+					"flexGrow": 0.5
+				}
+			}
+		},
+		{
+			"className": ".flexLayout",
+			"id": "84da-3564-ef93-ed65",
+			"props": {
+				"children": [
+					"d8c9-c259-fcbb-b5d2",
+					"327d-8da1-08f1-9bd6"
+				],
+				"name": "flWrapper",
+				"parent": "3c06-8071-88ec-72fe"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"bottom": 5,
+				"flexProps": {
+					"positionType": "ABSOLUTE"
+				},
+				"height": null,
+				"left": 5,
+				"right": 30,
+				"top": 5.769230769230769,
+				"width": null
+			}
+		},
+		{
+			"className": ".label .flGrow",
+			"id": "d8c9-c259-fcbb-b5d2",
+			"props": {
+				"autoHeight": 17.307692307692307,
+				"children": [],
+				"name": "lblNewHeader",
+				"parent": "84da-3564-ef93-ed65",
+				"text": "Obamacare Is Proving Hard to Kill",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "Label",
+			"userProps": {
+				"autoHeight": 17.307692307692307,
+				"font": {
+					"size": 12,
+					"bold": false,
+					"italic": false,
+					"family": "Default",
+					"style": "Regular"
+				},
+				"text": "Obamacare Is Proving Hard to Kill",
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".label .flGrow",
+			"id": "327d-8da1-08f1-9bd6",
+			"props": {
+				"autoHeight": 13.461538461538462,
+				"children": [],
+				"name": "lblNewDetail",
+				"parent": "84da-3564-ef93-ed65",
+				"text": "In spite of Republican attacks, the insurance markets under the Affordable Care Act are stubbornly resilient. While consumers can expect sharp price increases in some areas, premiums are going up modestly in others.",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "Label",
+			"userProps": {
+				"autoHeight": 13.461538461538462,
+				"font": {
+					"size": 10,
+					"bold": false,
+					"italic": false,
+					"family": "Default",
+					"style": "Regular"
+				},
+				"text": "In spite of Republican attacks, the insurance markets under the Affordable Care Act are stubbornly resilient. While consumers can expect sharp price increases in some areas, premiums are going up modestly in others.",
+				"textColor": "rgba( 155, 155, 155, 1 )",
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".imageView .img-bookmark.passive",
+			"id": "0b52-8d34-871b-e3ee",
+			"props": {
+				"children": [],
+				"name": "imgBookmark",
+				"parent": "3c06-8071-88ec-72fe",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "ImageView",
+			"userProps": {
+				"usePageVariable": true
+			}
+		}
+	]
+}

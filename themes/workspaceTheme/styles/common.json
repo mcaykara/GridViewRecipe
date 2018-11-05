@@ -1,0 +1,38 @@
+{
+	".flGrow": {
+		"height": null,
+		"width": null,
+		"flexProps": {
+			"flexGrow": 1
+		}
+	},
+	".img": {
+		"&-bookmark": {
+			"width": 20,
+			"height": 20,
+			"right": 10,
+			"top": 10,
+			"imageFillType": "ASPECTFIT",
+			"flexProps": {
+				"positionType": "ABSOLUTE"
+			},
+			".passive": {
+				"image": "bookmark_passive.png"
+			},
+			".active": {
+				"image": "bookmark_active.png"
+			}
+		}
+	},
+	".flAbsoluteGrow": {
+		"flexProps": {
+			"positionType": "ABSOLUTE"
+		},
+		"top": 0,
+		"left": 0,
+		"bottom": 0,
+		"right": 0,
+		"width": null,
+		"height": null
+	}
+}

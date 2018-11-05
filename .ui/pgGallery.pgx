@@ -1,0 +1,103 @@
+{
+	"components": [
+		{
+			"className": ".page",
+			"id": "8e05-2a54-d2f2-c7a9",
+			"initialized": true,
+			"props": {
+				"children": [
+					"571e-48d8-4605-f9ac",
+					"7035-6965-9d96-88a9",
+					"320f-020d-e6a5-e6a9"
+				],
+				"name": "pgGallery",
+				"orientation": "AUTO",
+				"parent": null
+			},
+			"type": "Page",
+			"userProps": {
+				"orientation": "AUTO"
+			},
+			"version": "6.9.0"
+		},
+		{
+			"className": ".statusBar",
+			"id": "571e-48d8-4605-f9ac",
+			"props": {
+				"children": [],
+				"isRemovable": false,
+				"name": "statusBar",
+				"parent": "8e05-2a54-d2f2-c7a9"
+			},
+			"type": "StatusBar",
+			"userProps": {}
+		},
+		{
+			"className": ".headerBar",
+			"id": "7035-6965-9d96-88a9",
+			"props": {
+				"children": [],
+				"isRemovable": false,
+				"name": "headerBar",
+				"parent": "8e05-2a54-d2f2-c7a9",
+				"title": "Gallery"
+			},
+			"type": "HeaderBar",
+			"userProps": {
+				"title": "Gallery"
+			}
+		},
+		{
+			"className": ".gridView .flGrow",
+			"id": "320f-020d-e6a5-e6a9",
+			"props": {
+				"children": [
+					"805a-4f24-8fd0-a95c"
+				],
+				"itemCount": 10,
+				"name": "gvMain",
+				"parent": "8e05-2a54-d2f2-c7a9",
+				"usePageVariable": true
+			},
+			"type": "GridView",
+			"userProps": {
+				"itemCount": 10,
+				"layoutManager": {
+					"spanCount": 2,
+					"scrollDirection": "VERTICAL"
+				},
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".gridViewItem",
+			"hiddenComponent": false,
+			"id": "805a-4f24-8fd0-a95c",
+			"props": {
+				"children": [],
+				"name": "gvGalleryItem",
+				"parent": "320f-020d-e6a5-e6a9"
+			},
+			"source": {
+				"page": "__library__",
+				"type": "gvGalleryItem",
+				"id": "bf0f-046e-5b21-dd9e"
+			},
+			"type": "GridViewItem",
+			"userProps": {
+				"flex": {
+					"positionType": 0
+				},
+				"flexProps": {
+					"positionType": "RELATIVE"
+				},
+				"left": 0,
+				"paddingBottom": 2.5,
+				"paddingLeft": 2.5,
+				"paddingRight": 2.5,
+				"paddingTop": 2.5,
+				"top": 0
+			}
+		}
+	]
+}

@@ -1,0 +1,13 @@
+{
+	"config": {
+		"theme": {
+			"currentTheme": "workspaceTheme",
+			"themes": [
+				"defaultTheme",
+				"workspaceTheme"
+			],
+			"baseTheme": "workspaceTheme"
+		},
+		"version": "6.9.0"
+	}
+}

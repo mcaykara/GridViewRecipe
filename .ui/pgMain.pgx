@@ -1,0 +1,151 @@
+{
+	"components": [
+		{
+			"className": ".page",
+			"id": "4ad3-104e-db76-ebda",
+			"initialized": true,
+			"props": {
+				"children": [
+					"772e-2b9a-c830-ee16",
+					"5e3f-5be6-39c1-7c21",
+					"b40c-d5e0-d74d-0e48",
+					"ef57-74fa-8898-83c3",
+					"d4a3-1f80-eedb-62b2",
+					"e3e1-a5b4-be20-fa20"
+				],
+				"name": "pgMain",
+				"orientation": "PORTRAIT",
+				"parent": null
+			},
+			"type": "Page",
+			"userProps": {},
+			"version": "6.9.0"
+		},
+		{
+			"className": ".statusBar",
+			"id": "772e-2b9a-c830-ee16",
+			"props": {
+				"children": [],
+				"isRemovable": false,
+				"name": "statusBar",
+				"parent": "4ad3-104e-db76-ebda"
+			},
+			"type": "StatusBar",
+			"userProps": {}
+		},
+		{
+			"className": ".headerBar",
+			"id": "5e3f-5be6-39c1-7c21",
+			"props": {
+				"children": [],
+				"isRemovable": false,
+				"name": "headerBar",
+				"parent": "4ad3-104e-db76-ebda",
+				"title": "GridView Test"
+			},
+			"type": "HeaderBar",
+			"userProps": {
+				"title": "GridView Test",
+				"visible": true
+			}
+		},
+		{
+			"className": ".flexLayout .flGrow",
+			"id": "b40c-d5e0-d74d-0e48",
+			"props": {
+				"children": [],
+				"name": "fl1",
+				"parent": "4ad3-104e-db76-ebda"
+			},
+			"type": "FlexLayout",
+			"userProps": {}
+		},
+		{
+			"className": ".flexLayout",
+			"id": "ef57-74fa-8898-83c3",
+			"props": {
+				"children": [
+					"7113-3d12-8e53-70da",
+					"df64-c058-1ac3-5d9a"
+				],
+				"name": "fl2",
+				"parent": "4ad3-104e-db76-ebda"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"flexProps": {
+					"alignItems": "CENTER"
+				},
+				"height": null,
+				"width": null
+			}
+		},
+		{
+			"className": ".button",
+			"id": "7113-3d12-8e53-70da",
+			"props": {
+				"autoHeight": 51,
+				"children": [],
+				"name": "btnNews",
+				"parent": "ef57-74fa-8898-83c3",
+				"text": "News",
+				"usePageVariable": true
+			},
+			"type": "Button",
+			"userProps": {
+				"autoHeight": 51,
+				"marginBottom": 15,
+				"text": "News",
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".button",
+			"id": "df64-c058-1ac3-5d9a",
+			"props": {
+				"autoHeight": 51,
+				"children": [],
+				"name": "btnGallery",
+				"parent": "ef57-74fa-8898-83c3",
+				"text": "Gallery",
+				"usePageVariable": true
+			},
+			"type": "Button",
+			"userProps": {
+				"autoHeight": 51,
+				"marginTop": 15,
+				"text": "Gallery",
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".flexLayout .flGrow",
+			"id": "d4a3-1f80-eedb-62b2",
+			"props": {
+				"children": [],
+				"name": "fl3",
+				"parent": "4ad3-104e-db76-ebda"
+			},
+			"type": "FlexLayout",
+			"userProps": {}
+		},
+		{
+			"className": ".activityIndicator .flAbsoluteGrow",
+			"hiddenComponent": true,
+			"id": "e3e1-a5b4-be20-fa20",
+			"props": {
+				"children": [],
+				"name": "indicator",
+				"parent": "4ad3-104e-db76-ebda",
+				"usePageVariable": true
+			},
+			"type": "ActivityIndicator",
+			"userProps": {
+				"alpha": 0.3,
+				"color": "rgba( 0, 161, 241, 1 )",
+				"usePageVariable": true,
+				"visible": true
+			}
+		}
+	]
+}

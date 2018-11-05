@@ -1,0 +1,43 @@
+{
+	"components": [
+		{
+			"className": ".gridViewItem",
+			"hiddenComponent": true,
+			"id": "bf0f-046e-5b21-dd9e",
+			"props": {
+				"children": [
+					"c3f1-21c9-96ac-b8f9"
+				],
+				"name": "gvGalleryItem",
+				"parent": "57f4-201f-4bfc-5fc6"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "GridViewItem",
+			"userProps": {
+				"flexProps": {},
+				"left": 43.421052631578945,
+				"top": 410.5263157894737
+			}
+		},
+		{
+			"className": ".imageView .flGrow",
+			"id": "c3f1-21c9-96ac-b8f9",
+			"props": {
+				"children": [],
+				"name": "img",
+				"parent": "bf0f-046e-5b21-dd9e",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "ImageView",
+			"userProps": {
+				"imageFillType": "ASPECTFILL",
+				"usePageVariable": true
+			}
+		}
+	]
+}

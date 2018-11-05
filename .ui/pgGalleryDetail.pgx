@@ -1,0 +1,66 @@
+{
+	"components": [
+		{
+			"className": ".page",
+			"id": "9186-5874-cae0-433a",
+			"initialized": true,
+			"props": {
+				"children": [
+					"a866-5fe0-0eaa-7182",
+					"e795-3517-d11f-abdb",
+					"1549-7ac2-07b2-3b9c"
+				],
+				"name": "pgGalleryDetail",
+				"orientation": "AUTO",
+				"parent": null
+			},
+			"type": "Page",
+			"userProps": {
+				"orientation": "AUTO"
+			},
+			"version": "6.9.0"
+		},
+		{
+			"className": ".statusBar",
+			"id": "a866-5fe0-0eaa-7182",
+			"props": {
+				"children": [],
+				"isRemovable": false,
+				"name": "statusBar",
+				"parent": "9186-5874-cae0-433a"
+			},
+			"type": "StatusBar",
+			"userProps": {}
+		},
+		{
+			"className": ".headerBar",
+			"id": "e795-3517-d11f-abdb",
+			"props": {
+				"children": [],
+				"isRemovable": false,
+				"name": "headerBar",
+				"parent": "9186-5874-cae0-433a",
+				"title": "Detail"
+			},
+			"type": "HeaderBar",
+			"userProps": {
+				"title": "Detail"
+			}
+		},
+		{
+			"className": ".imageView .flGrow",
+			"id": "1549-7ac2-07b2-3b9c",
+			"props": {
+				"children": [],
+				"name": "img",
+				"parent": "9186-5874-cae0-433a",
+				"usePageVariable": true
+			},
+			"type": "ImageView",
+			"userProps": {
+				"imageFillType": "ASPECTFILL",
+				"usePageVariable": true
+			}
+		}
+	]
+}
