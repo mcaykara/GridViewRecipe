@@ -8,7 +8,8 @@
 				"children": [
 					"571e-48d8-4605-f9ac",
 					"7035-6965-9d96-88a9",
-					"320f-020d-e6a5-e6a9"
+					"320f-020d-e6a5-e6a9",
+					"5d04-4497-5935-319f"
 				],
 				"name": "pgGallery",
 				"orientation": "AUTO",
@@ -18,7 +19,7 @@
 			"userProps": {
 				"orientation": "AUTO"
 			},
-			"version": "6.9.0"
+			"version": "6.13.0"
 		},
 		{
 			"className": ".statusBar",
@@ -97,6 +98,61 @@
 				"paddingRight": 2.5,
 				"paddingTop": 2.5,
 				"top": 0
+			}
+		},
+		{
+			"className": ".flexLayout",
+			"id": "5d04-4497-5935-319f",
+			"props": {
+				"children": [
+					"5199-344a-8a99-073e"
+				],
+				"name": "flindicator",
+				"parent": "8e05-2a54-d2f2-c7a9",
+				"usePageVariable": true
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"backgroundColor": "rgba( 255, 255, 255, 1 )",
+				"bottom": 0,
+				"flexProps": {
+					"positionType": "ABSOLUTE",
+					"flexWrap": "NOWRAP",
+					"justifyContent": "CENTER",
+					"flexDirection": "COLUMN"
+				},
+				"height": null,
+				"left": 0,
+				"right": 0,
+				"top": 0,
+				"usePageVariable": true,
+				"width": null
+			}
+		},
+		{
+			"className": ".activityIndicator",
+			"id": "5199-344a-8a99-073e",
+			"props": {
+				"children": [],
+				"name": "indicator",
+				"parent": "5d04-4497-5935-319f",
+				"usePageVariable": true
+			},
+			"type": "ActivityIndicator",
+			"userProps": {
+				"color": "rgba( 0, 161, 241, 1 )",
+				"flexProps": {
+					"alignSelf": "CENTER"
+				},
+				"height": 83.99999751601108,
+				"ios": {
+					"activityIndicatorViewStyle": "LARGE"
+				},
+				"minHeight": 42,
+				"minWidth": 42,
+				"usePageVariable": true,
+				"visible": true,
+				"width": 84
 			}
 		}
 	]

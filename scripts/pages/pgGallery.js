@@ -1,5 +1,5 @@
+const Image = require("sf-core/ui/image");
 const Color = require("sf-core/ui/color");
-const Router = require("sf-core/ui/router");
 const Screen = require("sf-core/device/screen");
 const extend = require('js-base/core/extend');
 const PgGalleryDesign = require('ui/ui_pgGallery');
@@ -9,12 +9,15 @@ const showDeleteMenu = require("../utils/index").showDeleteMenu;
 const categories = require("../categories").all;
 const constants = require("../constants");
 const GALLERY_ITEM_ACTION = constants.GALLERY_ITEM_ACTION;
+const HeaderBarItem = require('sf-core/ui/headerbaritem');
 
 const PgGallery = extend(PgGalleryDesign)(
     // Constructor
-    function(_super) {
+    function(_super,routeData, router) {
         // Initalizes super class for this page scope
         _super(this);
+        this._router = router;
+        this._routeData = routeData;
         // Overrides super.onShow method
         this.onShow = onShow.bind(this, this.onShow.bind(this));
         // Overrides super.onLoad method
@@ -36,18 +39,34 @@ function onShow(superOnShow) {
  * This event is called once when page is created.
  * @param {function} superOnLoad super onLoad function
  */
+
 function onLoad(superOnLoad) {
     superOnLoad();
-
     const page = this;
-    page.headerBar.itemColor = Color.create("#000000");
-
+    page.headerBar.itemColor = Color.create("#ffffff");
+    page.headerBar.visible = true;
+    page.headerBar.leftItemEnabled = true;
+    
+    var myItem = new HeaderBarItem({
+        title: "Smartface",
+        image:Image.createFromFile("images://leftarrow.png"),
+        onPress: ()=> {
+            this._router.goBack()
+        }
+    });
+   
+    page.headerBar.setLeftItem(myItem);// .setLeftItem(myItem);
+    
     page.onOrientationChange = function() {
         page.gvMain.layoutManager.spanCount = getSpanCountByScreenWidth();
     };
 
+    page.flindicator.visible = true;
     getNewsByCategory(categories[0])
-        .then(news => initGridView.call(page, page.gvMain, news))
+        .then(news => {
+            initGridView.call(page, page.gvMain, news);
+            page.flindicator.visible = false;
+        })    
         .catch(e => alert(e));
 }
 
@@ -70,10 +89,11 @@ function initGridView(gridView, news) {
     gridView.onItemSelected = function(item, index) {
         showDeleteMenu(page)
             .then(action => {
+                
                 switch (action) {
                     case GALLERY_ITEM_ACTION.SHOW:
-                        var imageUrl = findImageUrlByIndex(newsToShow, index);
-                        Router.go("pgGalleryDetail", { imageUrl: imageUrl });
+                        let imageUrl = findImageUrlByIndex(newsToShow, index);
+                        page._router.push("/detailgallery", { imageUrl });
                         break;
                     case GALLERY_ITEM_ACTION.DELETE:
                         newsToShow.splice(index, 1);
@@ -91,6 +111,7 @@ function initGridView(gridView, news) {
 
     gridView.layoutManager.spanCount = getSpanCountByScreenWidth();
     gridView.itemCount = newsToShow.length;
+   
     gridView.refreshData();
 }
 

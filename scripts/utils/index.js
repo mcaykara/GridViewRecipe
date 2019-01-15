@@ -13,11 +13,17 @@ var fetchNews = (function() {
     // Fetch CATEGORIES_TO_FETCH categories at a time
     return function fetchNews() {
         var categoriesToBeFetched = categories.slice(lastIndex, lastIndex += CATEGORIES_TO_FETCH);
+        if (lastIndex>=categories.length) lastIndex = 0; //added 12.01.2019 by Süleyman
+        //console.log(categories.length+" "+lastIndex);
         var promises = categoriesToBeFetched.map(c => getNewsByCategory(c));
         var shouldFetch = categoriesToBeFetched.length > 0;
         return new Promise((resolve, reject) => {
-            if (!shouldFetch)
+            if (!shouldFetch) {
+                /*an error occurs after 4th time so I added a line to 
+                assign zero to lastIndex when it is more than or equal to 
+                categories.length */
                 return resolve();
+            }    
             Promise
                 .all(promises)
                 .then(fetchedNews => {
@@ -25,7 +31,7 @@ var fetchNews = (function() {
                         .forEach((fetchedNew, index) => {
                             var category = categoriesToBeFetched[index];
                             news[category] = fetchedNew;
-
+                            
                             // IS USED TO TEST PERFORMANCE, MAY BE REMOVED
                             //var duplicatedNews = [];
                             //for (let i = 0; i < 10; ++i) {
@@ -36,6 +42,7 @@ var fetchNews = (function() {
 
                             //console.log(`${category} ${JSON.stringify(fetchedNew)}`);
                         });
+                    //console.log(news);    
                     resolve(news);
                 })
                 .catch(error => {
@@ -44,6 +51,7 @@ var fetchNews = (function() {
         });
     };
 })();
+
 
 function findImageUrlByIndex(news, index) {
     var currentNew = news[index];
@@ -56,7 +64,9 @@ function capitalizeFirstLetter(str) {
     return str.replace(/^\w/, c => c.toUpperCase());
 }
 
+
 function showDeleteMenu(page) {
+    
     return new Promise((resolve, reject) => {
         var menu = new Menu();
         var menuItemShow = new MenuItem({
@@ -74,6 +84,7 @@ function showDeleteMenu(page) {
         menuItemCancel.ios.style = MenuItem.ios.Style.CANCEL;
 
         menuItemShow.onSelected = function() {
+            
             resolve(GALLERY_ITEM_ACTION.SHOW);
         };
 
@@ -86,7 +97,9 @@ function showDeleteMenu(page) {
         };
 
         menu.items = (System.OS === "iOS") ? [menuItemShow, menuItemDelete, menuItemCancel] : [menuItemShow, menuItemDelete];
+        
         menu.show(page);
+        
     });
 }
 
