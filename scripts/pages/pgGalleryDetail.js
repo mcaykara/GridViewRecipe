@@ -1,22 +1,10 @@
 const Image = require("sf-core/ui/image");
-const ImageView = require('sf-core/ui/imageview');
-const NewItem = require("components/NewItem");
-const addChild = require("@smartface/contx/lib/smartface/action/addChild");
 const Color = require("sf-core/ui/color");
 const extend = require('js-base/core/extend');
 const PgGalleryDetailDesign = require('ui/ui_pgGalleryDetail');
-const fetchNews = require("../utils/index").fetchNews;
-const categories = require("../categories").all;
-const combinedCategories = require("../categories").combined;
-const constants = require("../constants");
-const CATEGORIES_TO_FETCH = constants.CATEGORIES_TO_FETCH;
 const NEW_ITEM_ROW_TYPE = require("../constants").NEW_ITEM_ROW_TYPE;
 const HeaderBarItem = require('sf-core/ui/headerbaritem');
-const TabBarItem = require('sf-core/ui/tabbaritem');
-const BottomTabBar = require('sf-core/ui/bottomtabbar');
 const placeholderImage = Image.createFromFile("images://placeholder.png");
-const findImageUrlByIndex = require("../utils/index").findImageUrlByIndex;
-
 const PgGalleryDetail = extend(PgGalleryDetailDesign)(
     // Constructor
     function(_super, routeData, router) {

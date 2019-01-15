@@ -11,10 +11,6 @@ const constants = require("../constants");
 const CATEGORIES_TO_FETCH = constants.CATEGORIES_TO_FETCH;
 const NEW_ITEM_ROW_TYPE = require("../constants").NEW_ITEM_ROW_TYPE;
 const HeaderBarItem = require('sf-core/ui/headerbaritem');
-const TabBarItem = require('sf-core/ui/tabbaritem');
-const BottomTabBar = require('sf-core/ui/bottomtabbar');
-const ActivityIndicator = extend(require('sf-core/ui/activityindicator'));
-
 
 const PgNews = extend(PgNewsDesign)(
     // Constructor
