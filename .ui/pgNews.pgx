@@ -8,15 +8,20 @@
 				"children": [
 					"4620-a05f-e952-49cb",
 					"242c-2fa8-3784-dca3",
-					"be02-6b82-e1d6-a512"
+					"131e-287b-2c79-2def",
+					"cc4b-d4b1-cd66-6e31"
 				],
 				"name": "pgNews",
 				"orientation": "PORTRAIT",
 				"parent": null
 			},
 			"type": "Page",
-			"userProps": {},
-			"version": "6.9.0"
+			"userProps": {
+				"flexProps": {
+					"alignContent": "STRETCH"
+				}
+			},
+			"version": "6.13.0"
 		},
 		{
 			"className": ".statusBar",
@@ -47,7 +52,7 @@
 		},
 		{
 			"className": ".listView .flGrow",
-			"id": "be02-6b82-e1d6-a512",
+			"id": "131e-287b-2c79-2def",
 			"props": {
 				"children": [],
 				"itemCount": 3,
@@ -57,8 +62,70 @@
 			},
 			"type": "ListView",
 			"userProps": {
+				"flexProps": {
+					"positionType": "RELATIVE"
+				},
+				"height": 0,
 				"itemCount": 3,
+				"left": 0,
+				"top": 0,
+				"usePageVariable": true,
+				"visible": true
+			}
+		},
+		{
+			"className": ".flexLayout",
+			"id": "cc4b-d4b1-cd66-6e31",
+			"props": {
+				"children": [
+					"529a-e233-7bf2-9ff4"
+				],
+				"name": "flindicator",
+				"parent": "eb9f-6d7c-62b1-41b0",
 				"usePageVariable": true
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"backgroundColor": "rgba( 255, 255, 255, 1 )",
+				"bottom": 0,
+				"flexProps": {
+					"positionType": "ABSOLUTE",
+					"flexWrap": "NOWRAP",
+					"justifyContent": "CENTER",
+					"flexDirection": "COLUMN"
+				},
+				"height": null,
+				"left": 0,
+				"right": 0,
+				"top": 0,
+				"usePageVariable": true,
+				"width": null
+			}
+		},
+		{
+			"className": ".activityIndicator",
+			"id": "529a-e233-7bf2-9ff4",
+			"props": {
+				"children": [],
+				"name": "indicator",
+				"parent": "cc4b-d4b1-cd66-6e31",
+				"usePageVariable": true
+			},
+			"type": "ActivityIndicator",
+			"userProps": {
+				"color": "rgba( 0, 161, 241, 1 )",
+				"flexProps": {
+					"alignSelf": "CENTER"
+				},
+				"height": 83.99999751601108,
+				"ios": {
+					"activityIndicatorViewStyle": "LARGE"
+				},
+				"minHeight": 42,
+				"minWidth": 42,
+				"usePageVariable": true,
+				"visible": true,
+				"width": 84
 			}
 		}
 	]

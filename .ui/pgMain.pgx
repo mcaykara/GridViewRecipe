@@ -10,8 +10,7 @@
 					"5e3f-5be6-39c1-7c21",
 					"b40c-d5e0-d74d-0e48",
 					"ef57-74fa-8898-83c3",
-					"d4a3-1f80-eedb-62b2",
-					"e3e1-a5b4-be20-fa20"
+					"d4a3-1f80-eedb-62b2"
 				],
 				"name": "pgMain",
 				"orientation": "PORTRAIT",
@@ -19,7 +18,7 @@
 			},
 			"type": "Page",
 			"userProps": {},
-			"version": "6.9.0"
+			"version": "6.13.0"
 		},
 		{
 			"className": ".statusBar",
@@ -128,24 +127,6 @@
 			},
 			"type": "FlexLayout",
 			"userProps": {}
-		},
-		{
-			"className": ".activityIndicator .flAbsoluteGrow",
-			"hiddenComponent": true,
-			"id": "e3e1-a5b4-be20-fa20",
-			"props": {
-				"children": [],
-				"name": "indicator",
-				"parent": "4ad3-104e-db76-ebda",
-				"usePageVariable": true
-			},
-			"type": "ActivityIndicator",
-			"userProps": {
-				"alpha": 0.3,
-				"color": "rgba( 0, 161, 241, 1 )",
-				"usePageVariable": true,
-				"visible": true
-			}
 		}
 	]
 }

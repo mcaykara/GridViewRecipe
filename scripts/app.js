@@ -1,5 +1,6 @@
 /* globals lang */
 require("i18n/i18n.js"); // Generates global lang object
+// const buildExtender = require("buildExtender");
 
 const Application = require("sf-core/application");
 
@@ -14,14 +15,97 @@ Application.onUnhandledError = function(e) {
 
 require("sf-extension-utils");
 require("./theme");
-const Router = require("sf-core/ui/router");
+
 const initService = require("./service/index").init;
+
+const {
+    NativeRouter: Router,
+    Router: RouterBase,
+    NativeStackRouter: StackRouter,
+    BottomTabBarRouter,
+    Route
+} = require("@smartface/router");
+
+const router = Router.of({
+    path: "/",
+    isRoot: true,
+    routes: [
+        Route.of({
+            path: "/main",
+            headerBarParams: () => { visible: true },
+            build: (router, route) => {
+                const { routeData, view } = route.getState();
+                let PgMain = require("./pages/pgMain");
+                return new PgMain(routeData, router);
+            }
+        }),
+        Route.of({
+            path: "/gallery",
+            headerBarParams: () => { visible: true },
+            build: (router, route) => {
+                const { routeData, view } = route.getState();
+                let PgGallery = require("./pages/pgGallery");
+                return new PgGallery(routeData, router);
+            },
+            routeDidEnter: (router, route) => {
+                console.log(router.getState());
+            },
+        }),
+        Route.of({
+            path: "/news",
+            headerBarParams: () => { visible: true },
+            build: (router, route) => {
+                const { routeData, view } = route.getState();
+                let PgNews = require("./pages/pgNews");
+                return new PgNews(routeData, router);
+            }
+        }),
+        Route.of({
+            path: "/detailgallery",
+            headerBarParams: () => { visible: true },
+            build: (router, route) => {
+                const { routeData, view } = route.getState();
+                let PgNews = require("./pages/pgGalleryDetail");
+                return new PgNews(routeData, router);
+            }
+        }),
+        /*StackRouter.of({
+            path: "/dgallery",
+            homeRoot: 0,
+            modal: true,
+            routes: [
+                Route.of({
+                    path: "/dgallery/detail",
+                    routeDidEnter: (router, route) => {
+                        console.log('State:' + route.isModal());
+                    },
+                    build: (router, route) => {
+                        const { routeData, view } = route.getState();
+                        let PgGalleryDetail = require("./pages/pgGalleryDetail");
+                        return new PgGalleryDetail(routeData, router, () => router.push('./pages/pgGalleryDetail'));
+                    },
+
+                }),
+                StackRouter.of({
+                    path: '/dgallery',
+                    modal: true,
+                    routes: [
+                        Route.of({
+                            path: "/dgallery/detail",
+                            build: (router, route) => {
+                                const { routeData, view } = route.getState();
+                                let PgGalleryDetail = require("./pages/pgGalleryDetail");
+                                return new PgGalleryDetail(routeData, router, () => router.dismiss());
+                            }
+                        })
+                    ]
+                })
+
+            ]
+        })*/
+    ]
+});
 
 //initService();
 
-// Define routes and go to initial page of application
-Router.add("pgMain", require("./pages/pgMain"));
-Router.add("pgGallery", require("./pages/pgGallery"));
-Router.add("pgNews", require("./pages/pgNews"));
-Router.add("pgGalleryDetail", require("./pages/pgGalleryDetail"));
-Router.go("pgMain");
+router.push("/main");

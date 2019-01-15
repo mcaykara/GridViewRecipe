@@ -1,3 +1,4 @@
+const Image = require("sf-core/ui/image");
 const NewItem = require("components/NewItem");
 const addChild = require("@smartface/contx/lib/smartface/action/addChild");
 const Color = require("sf-core/ui/color");
@@ -9,12 +10,19 @@ const combinedCategories = require("../categories").combined;
 const constants = require("../constants");
 const CATEGORIES_TO_FETCH = constants.CATEGORIES_TO_FETCH;
 const NEW_ITEM_ROW_TYPE = require("../constants").NEW_ITEM_ROW_TYPE;
+const HeaderBarItem = require('sf-core/ui/headerbaritem');
+const TabBarItem = require('sf-core/ui/tabbaritem');
+const BottomTabBar = require('sf-core/ui/bottomtabbar');
+const ActivityIndicator = extend(require('sf-core/ui/activityindicator'));
+
 
 const PgNews = extend(PgNewsDesign)(
     // Constructor
-    function(_super) {
+    function(_super, routeData, router) {
         // Initalizes super class for this page scope
         _super(this);
+        this._router = router;
+        this._routeData = routeData;
         // Overrides super.onShow method
         this.onShow = onShow.bind(this, this.onShow.bind(this));
         // Overrides super.onLoad method
@@ -29,6 +37,7 @@ const PgNews = extend(PgNewsDesign)(
  */
 function onShow(superOnShow) {
     superOnShow();
+    //Object.assign(this.headerBar, { visible: true });
 }
 
 /**
@@ -38,12 +47,38 @@ function onShow(superOnShow) {
  */
 function onLoad(superOnLoad) {
     superOnLoad();
-
     const page = this;
-    page.headerBar.itemColor = Color.create("#000000");
+    page.headerBar.itemColor = Color.create("#ffffff");
+    page.headerBar.visible = true;
+    page.headerBar.leftItemEnabled = true;
+
+    var myItem = new HeaderBarItem({
+        title: "Smartface",
+        //if any image is not put here onPress will not be activated
+        image: Image.createFromFile("images://leftarrow.png"),
+        onPress: () => {
+            this._router.goBack()
+        }
+    });
+
+    page.headerBar.setLeftItem(myItem); // .setLeftItem(myItem);
+    page.flindicator.visible = true;
     fetchNews()
-        .then(fetchedNews => initListView(page.lvMain, fetchedNews))
-        .catch(e => alert(e));
+        .then(fetchedNews => {
+            page.flindicator.visible = false;
+            fetchedNews && initListView(page.lvMain, fetchedNews);
+        })
+        .catch(function(e) {
+            if (!isEmpty(e)) alert(e); 
+        });
+}
+
+function isEmpty(obj) {
+    for(var key in obj) {
+        if(obj.hasOwnProperty(key))
+            return false;
+    }
+    return true;
 }
 
 function initListView(listView, fetchedNews) {
@@ -71,12 +106,17 @@ function initListView(listView, fetchedNews) {
 
                         news = e;
                         categoriesShown += CATEGORIES_TO_FETCH;
+                        
                         if (categoriesShown > categories.length)
                             categoriesShown = categories.length;
                         listView.itemCount = categoriesShown;
                         listView.refreshData();
                     })
-                    .catch(e => alert(e));
+                    //to prevent an empty message added by suleyman.hasoglu 12.01.2019
+                    .catch(function(e) {
+                        if (!isEmpty(e)) alert(e); 
+                    });
+                    
             }
         };
     })();

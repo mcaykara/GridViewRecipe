@@ -8,7 +8,8 @@
 				"children": [
 					"a866-5fe0-0eaa-7182",
 					"e795-3517-d11f-abdb",
-					"1549-7ac2-07b2-3b9c"
+					"1549-7ac2-07b2-3b9c",
+					"8d12-bc54-25e6-2240"
 				],
 				"name": "pgGalleryDetail",
 				"orientation": "AUTO",
@@ -18,7 +19,7 @@
 			"userProps": {
 				"orientation": "AUTO"
 			},
-			"version": "6.9.0"
+			"version": "6.13.0"
 		},
 		{
 			"className": ".statusBar",
@@ -60,6 +61,57 @@
 			"userProps": {
 				"imageFillType": "ASPECTFILL",
 				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".flexLayout",
+			"id": "8d12-bc54-25e6-2240",
+			"props": {
+				"children": [
+					"570b-02a3-e0e6-a2bc"
+				],
+				"name": "flindicator",
+				"parent": "9186-5874-cae0-433a",
+				"usePageVariable": true
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"bottom": 0,
+				"flexProps": {
+					"positionType": "ABSOLUTE",
+					"justifyContent": "CENTER"
+				},
+				"height": 0,
+				"left": 0,
+				"right": 0,
+				"top": 0,
+				"usePageVariable": true,
+				"width": 0
+			}
+		},
+		{
+			"className": ".activityIndicator",
+			"id": "570b-02a3-e0e6-a2bc",
+			"props": {
+				"children": [],
+				"name": "indicator",
+				"parent": "8d12-bc54-25e6-2240",
+				"usePageVariable": true
+			},
+			"type": "ActivityIndicator",
+			"userProps": {
+				"color": "rgba( 208, 2, 27, 1 )",
+				"flexProps": {
+					"alignSelf": "CENTER"
+				},
+				"height": 84,
+				"ios": {
+					"activityIndicatorViewStyle": "LARGE"
+				},
+				"minHeight": 42,
+				"minWidth": 42,
+				"usePageVariable": true,
+				"width": 84
 			}
 		}
 	]
