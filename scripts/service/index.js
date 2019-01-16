@@ -4,7 +4,7 @@ const TOO_MANY_REQUESTS = 429;
 const AVAILABLE_CATEGORIES = require("../categories").all;
 
 // If API_KEY expires, you can get a new one from http://developer.nytimes.com/signup
-const API_KEY = "fd80d1d08551496493e32e194d642bbc";
+const API_KEY = "UVoMmQipSo0qHuC4Y7XjsnXzsAsCPTtY";
 
 var getNewsByCategory = (function() {
     var newsByCategoryMap = {};

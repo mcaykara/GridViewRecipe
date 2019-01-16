@@ -13,6 +13,7 @@ Application.onUnhandledError = function(e) {
     });
 };
 
+
 require("sf-extension-utils");
 require("./theme");
 
@@ -30,82 +31,61 @@ const router = Router.of({
     path: "/",
     isRoot: true,
     routes: [
-        Route.of({
-            path: "/main",
-            headerBarParams: () => { visible: true },
-            build: (router, route) => {
-                const { routeData, view } = route.getState();
-                let PgMain = require("./pages/pgMain");
-                return new PgMain(routeData, router);
-            }
-        }),
-        Route.of({
-            path: "/gallery",
-            headerBarParams: () => { visible: true },
-            build: (router, route) => {
-                const { routeData, view } = route.getState();
-                let PgGallery = require("./pages/pgGallery");
-                return new PgGallery(routeData, router);
-            },
-            routeDidEnter: (router, route) => {
-                console.log(router.getState());
-            },
-        }),
-        Route.of({
-            path: "/news",
-            headerBarParams: () => { visible: true },
-            build: (router, route) => {
-                const { routeData, view } = route.getState();
-                let PgNews = require("./pages/pgNews");
-                return new PgNews(routeData, router);
-            }
-        }),
-        Route.of({
-            path: "/detailgallery",
-            headerBarParams: () => { visible: true },
-            build: (router, route) => {
-                const { routeData, view } = route.getState();
-                let PgNews = require("./pages/pgGalleryDetail");
-                return new PgNews(routeData, router);
-            }
-        }),
-        /*StackRouter.of({
-            path: "/dgallery",
-            homeRoot: 0,
-            modal: true,
+        StackRouter.of({
+            path: "/pages",
+            headerBarParams: () => { ios: { translucent: false } },
             routes: [
                 Route.of({
-                    path: "/dgallery/detail",
-                    routeDidEnter: (router, route) => {
-                        console.log('State:' + route.isModal());
-                    },
+                    path: "/pages/main",
+                    headerBarParams: () => { visible: true },
                     build: (router, route) => {
                         const { routeData, view } = route.getState();
-                        let PgGalleryDetail = require("./pages/pgGalleryDetail");
-                        return new PgGalleryDetail(routeData, router, () => router.push('./pages/pgGalleryDetail'));
+                        let PgMain = require("./pages/pgMain");
+                        return new PgMain(routeData, router);
+                    }
+                }),
+                Route.of({
+                    path: "/pages/gallery",
+                    headerBarParams: () => { visible: true },
+                    build: (router, route) => {
+                        const { routeData, view } = route.getState();
+                        let PgGallery = require("./pages/pgGallery");
+                        return new PgGallery(routeData, router);
                     },
-
+                    routeDidEnter: (router, route) => {
+                        console.log(router.getState());
+                    },
+                }),
+                Route.of({
+                    path: "/pages/news",
+                    headerBarParams: () => { visible: true },
+                    build: (router, route) => {
+                        const { routeData, view } = route.getState();
+                        let PgNews = require("./pages/pgNews");
+                        return new PgNews(routeData, router);
+                    }
                 }),
                 StackRouter.of({
-                    path: '/dgallery',
+                    path: "/pages",
                     modal: true,
+                    headerBarParams: () => { ios: { translucent: false } },
                     routes: [
                         Route.of({
-                            path: "/dgallery/detail",
+                            path: "/pages/detailgallery",
+                            headerBarParams: () => { visible: true },
                             build: (router, route) => {
                                 const { routeData, view } = route.getState();
-                                let PgGalleryDetail = require("./pages/pgGalleryDetail");
-                                return new PgGalleryDetail(routeData, router, () => router.dismiss());
+                                let PgMain = require("./pages/pgGalleryDetail");
+                                return new PgMain(routeData, router);
                             }
                         })
                     ]
-                })
-
+                })    
             ]
-        })*/
+        })
     ]
 });
 
-//initService();
 
-router.push("/main");
+
+router.push("/pages/main");

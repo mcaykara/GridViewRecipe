@@ -17,7 +17,6 @@ const PgGalleryDetail = extend(PgGalleryDetailDesign)(
         // Overrides super.onLoad method
         this.onLoad = onLoad.bind(this, this.onLoad.bind(this));
     });
-    
 
 /**
  * @event onShow
@@ -50,10 +49,9 @@ function onLoad(superOnLoad) {
         title: "Smartface",
         image:Image.createFromFile("images://leftarrow.png"),
         onPress: ()=> {
-            page._router.goBack(); 
+            page._router.dismiss(() => page._router.push("/pages/gallery"));
         }    
     });
-   
     page.headerBar.setLeftItem(myItem);// .setLeftItem(myItem);
 }
 

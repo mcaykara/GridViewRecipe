@@ -74,13 +74,6 @@ function initGridView(gridView, news) {
     const page = this;
     var newsToShow = news;
 
-    // IS USED TO TEST PERFORMANCE, MAY BE REMOVED
-    //newsToShow = [];
-    //for (let i = 0; i < 10; ++i) {
-    //    newsToShow = newsToShow.concat(news);
-    //}
-    // IS USED TO TEST PERFORMANCE, MAY BE REMOVED
-
     gridView.onItemBind = function(item, index) {
         var imageUrl = findImageUrlByIndex(newsToShow, index);
         imageUrl && (item.src = imageUrl);
@@ -93,7 +86,7 @@ function initGridView(gridView, news) {
                 switch (action) {
                     case GALLERY_ITEM_ACTION.SHOW:
                         let imageUrl = findImageUrlByIndex(newsToShow, index);
-                        page._router.push("/detailgallery", { imageUrl });
+                        page._router.push("/pages/detailgallery", { imageUrl });
                         break;
                     case GALLERY_ITEM_ACTION.DELETE:
                         newsToShow.splice(index, 1);
