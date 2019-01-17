@@ -28,7 +28,6 @@ const PgMain = extend(PgMainDesign)(
 function onShow(superOnShow) {
     superOnShow();
     const page = this;
-    //page.indicator.visible = false;
 }
 
 /**
@@ -44,22 +43,11 @@ function onLoad(superOnLoad) {
     page.headerBar.visible = true;
     page.headerBar.leftItemEnabled = true;
 
-    var myItem = new HeaderBarItem({
-        title: "Smartface",
-        //if any image is not put here onPress will not be activated
-        image: Image.createFromFile("images://leftarrow.png"),
-        onPress: () => {
-            Application.exit();
-        }
-    });
-
-    page.headerBar.setLeftItem(myItem); // .setLeftItem(myItem);
-
     page.btnNews.onPress = function() {
-        page._router.push("/news");
+        page._router.push("/pages/news");
     };
     page.btnGallery.onPress = function() {
-        page._router.push("/gallery");
+        page._router.push("/pages/gallery");
     };
 }
 
