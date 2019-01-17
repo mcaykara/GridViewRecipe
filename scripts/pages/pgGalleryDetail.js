@@ -49,10 +49,10 @@ function onLoad(superOnLoad) {
         title: "Smartface",
         image:Image.createFromFile("images://leftarrow.png"),
         onPress: ()=> {
-            page._router.dismiss(() => page._router.push("/pages/gallery"));
+            page._router.dismiss();
         }    
     });
-    page.headerBar.setLeftItem(myItem);// .setLeftItem(myItem);
+    page.headerBar.setLeftItem(myItem);
 }
 
 module.exports = PgGalleryDetail;
